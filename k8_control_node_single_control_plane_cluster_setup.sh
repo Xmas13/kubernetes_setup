@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Enter password as arg 1, otherwise will be assigned blank password
 K8USERPASSWORD=$1
 

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 modprobe br_netfilter
 
 cat <<EOF | tee /etc/sysctl.d/k8s.conf
