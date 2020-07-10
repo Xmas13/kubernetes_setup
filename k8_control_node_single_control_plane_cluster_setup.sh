@@ -12,8 +12,8 @@ usermod -aG wheel k8user
 echo $K8USERPASSWORD | passwd k8user --stdin
 K8HOME=/home/k8user
 mkdir -p ${K8HOME}/.kube
-sudo cp -i /etc/kubernetes/admin.conf ${K8HOME}/.kube/config
-sudo chown k8user:k8user ${K8HOME}/.kube/config
+cp -i /etc/kubernetes/admin.conf ${K8HOME}/.kube/config
+chown k8user:k8user ${K8HOME}/.kube/config
 
 # Install Calico
 su - k8user -c "kubectl apply -f https://docs.projectcalico.org/v3.14/manifests/calico.yaml"
